@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import Any
 
 from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from pydantic import BaseModel, Field, HttpUrl
 
 from app.core.config import limiter
@@ -16,6 +16,22 @@ from app.workflows import nodes as workflow_nodes
 
 router = APIRouter()
 graph = build_graph()
+
+
+def db_error_response(exc: Exception) -> JSONResponse:
+    """Structured error response for database failures — never exposes credentials."""
+    import pymongo.errors as pe
+    is_timeout = isinstance(exc, pe.ServerSelectionTimeoutError)
+    return JSONResponse(
+        status_code=503 if is_timeout else 500,
+        content={
+            "status": "database_unavailable" if is_timeout else "database_error",
+            "reason": type(exc).__name__,
+            "details": str(exc)[:300],
+            "retryable": is_timeout,
+        },
+    )
+
 
 
 class CampaignRequest(BaseModel):
@@ -291,25 +307,35 @@ async def stream_campaign(request: Request, campaign_id: str, last_event_id: int
 
 @router.get("/campaign/{campaign_id}")
 async def get_campaign(campaign_id: str):
-    db = await Database.get_db()
-    campaign = await db.campaigns.find_one({"campaign_id": campaign_id}, {"_id": 0})
-    if not campaign:
-        raise HTTPException(status_code=404, detail="Campaign not found")
-    node_runs = {}
-    async for node_run in db.node_runs.find({"campaign_id": campaign_id}, {"_id": 0}):
-        node_runs[node_run["node"]] = node_run
-    campaign["node_runs"] = node_runs
-    return campaign
+    try:
+        db = await Database.get_db()
+        campaign = await db.campaigns.find_one({"campaign_id": campaign_id}, {"_id": 0})
+        if not campaign:
+            raise HTTPException(status_code=404, detail="Campaign not found")
+        node_runs = {}
+        async for node_run in db.node_runs.find({"campaign_id": campaign_id}, {"_id": 0}):
+            node_runs[node_run["node"]] = node_run
+        campaign["node_runs"] = node_runs
+        return campaign
+    except HTTPException:
+        raise
+    except Exception as exc:
+        import logging; logging.getLogger(__name__).error(f"get_campaign error: {exc}", exc_info=True)
+        return db_error_response(exc)
 
 
 @router.get("/campaigns")
 async def list_campaigns(limit: int = 20):
-    db = await Database.get_db()
-    cursor = db.campaigns.find({}, {"_id": 0}).sort("created_at", -1).limit(min(limit, 100))
-    campaigns = []
-    async for campaign in cursor:
-        campaigns.append(campaign)
-    return {"campaigns": campaigns}
+    try:
+        db = await Database.get_db()
+        cursor = db.campaigns.find({}, {"_id": 0}).sort("created_at", -1).limit(min(limit, 100))
+        campaigns = []
+        async for campaign in cursor:
+            campaigns.append(campaign)
+        return {"campaigns": campaigns}
+    except Exception as exc:
+        import logging; logging.getLogger(__name__).error(f"list_campaigns error: {exc}", exc_info=True)
+        return db_error_response(exc)
 
 
 @router.get("/providers/health")
@@ -415,70 +441,73 @@ async def get_campaign_nodes(campaign_id: str):
 @router.get("/campaign/{campaign_id}/analytics")
 async def get_campaign_analytics(campaign_id: str):
     """Returns enriched analytics for the campaign dashboard."""
-    db = await Database.get_db()
-    campaign = await db.campaigns.find_one({"campaign_id": campaign_id}, {"_id": 0})
-    if not campaign:
-        raise HTTPException(status_code=404, detail="Campaign not found")
+    try:
+        db = await Database.get_db()
+        campaign = await db.campaigns.find_one({"campaign_id": campaign_id}, {"_id": 0})
+        if not campaign:
+            raise HTTPException(status_code=404, detail="Campaign not found")
 
-    node_runs = []
-    total_duration = 0.0
-    provider_switches = 0
-    cache_hits = 0
-    retries = 0
-    providers_used = set()
-    async for nr in db.node_runs.find({"campaign_id": campaign_id}, {"_id": 0}):
-        node_runs.append(nr)
-        total_duration += nr.get("duration", 0)
-        if nr.get("cache_state") == "cached":
-            cache_hits += 1
-        retries += nr.get("retry_count", 0)
-        provider = nr.get("provider", "")
-        if provider:
-            providers_used.add(provider)
+        node_runs = []
+        total_duration = 0.0
+        cache_hits = 0
+        retries = 0
+        providers_used = set()
+        async for nr in db.node_runs.find({"campaign_id": campaign_id}, {"_id": 0}):
+            node_runs.append(nr)
+            total_duration += nr.get("duration", 0)
+            if nr.get("cache_state") == "cached":
+                cache_hits += 1
+            retries += nr.get("retry_count", 0)
+            provider = nr.get("provider", "")
+            if provider:
+                providers_used.add(provider)
 
-    contacts_found = 1 if campaign.get("contact_info", {}).get("email") else 0
-    backlinks_found = 1 if campaign.get("target_url") else 0
-    qualified = 1 if campaign.get("opportunity_qualified") else 0
-    emails_generated = 1 if campaign.get("outreach_email") else 0
+        contacts_found = 1 if campaign.get("contact_info", {}).get("email") else 0
+        backlinks_found = 1 if campaign.get("target_url") else 0
+        qualified = 1 if campaign.get("opportunity_qualified") else 0
+        emails_generated = 1 if campaign.get("outreach_email") else 0
 
-    # Mock overall stats since this applies across campaigns
-    # Or query aggregate stats from campaigns
-    pipeline = [
-        {"$group": {
-            "_id": None,
-            "avg_da": {"$avg": "$score_breakdown.domain_authority"},
-            "live_links": {"$sum": {"$cond": [{"$eq": ["$backlink_verified", True]}, 1, 0]}}
-        }}
-    ]
-    cursor = db.campaigns.aggregate(pipeline)
-    agg_stats = {}
-    async for doc in cursor:
-        agg_stats = doc
-        break
-        
-    raw_avg_da = agg_stats.get("avg_da") if agg_stats else None
-    avg_da = round(raw_avg_da, 1) if raw_avg_da is not None else 0
-    live_links = agg_stats.get("live_links", 0) if agg_stats else 0
+        pipeline = [
+            {"$group": {
+                "_id": None,
+                "avg_da": {"$avg": "$score_breakdown.domain_authority"},
+                "live_links": {"$sum": {"$cond": [{"$eq": ["$backlink_verified", True]}, 1, 0]}}
+            }}
+        ]
+        cursor = db.campaigns.aggregate(pipeline)
+        agg_stats = {}
+        async for doc in cursor:
+            agg_stats = doc
+            break
 
-    return {
-        "campaign_id": campaign_id,
-        "total_execution_time": round(total_duration, 2),
-        "nodes_completed": len([nr for nr in node_runs if nr.get("status") and "failed" not in nr["status"]]),
-        "nodes_failed": len([nr for nr in node_runs if nr.get("status") and "failed" in nr.get("status", "")]),
-        "cache_hits": cache_hits,
-        "retries": retries,
-        "provider_switches": len(providers_used) - 1 if len(providers_used) > 1 else 0,
-        "providers_used": list(providers_used),
-        "contacts_found": contacts_found,
-        "backlinks_found": backlinks_found,
-        "qualified_opportunities": qualified,
-        "emails_generated": emails_generated,
-        "fit_score": campaign.get("fit_score"),
-        "score_breakdown": campaign.get("score_breakdown"),
-        "average_da": avg_da,
-        "live_backlinks": live_links,
-        "strategy": campaign.get("strategy", "guest_post")
-    }
+        raw_avg_da = agg_stats.get("avg_da") if agg_stats else None
+        avg_da = round(raw_avg_da, 1) if raw_avg_da is not None else 0
+        live_links = agg_stats.get("live_links", 0) if agg_stats else 0
+
+        return {
+            "campaign_id": campaign_id,
+            "total_execution_time": round(total_duration, 2),
+            "nodes_completed": len([nr for nr in node_runs if nr.get("status") and "failed" not in nr["status"]]),
+            "nodes_failed": len([nr for nr in node_runs if nr.get("status") and "failed" in nr.get("status", "")]),
+            "cache_hits": cache_hits,
+            "retries": retries,
+            "provider_switches": len(providers_used) - 1 if len(providers_used) > 1 else 0,
+            "providers_used": list(providers_used),
+            "contacts_found": contacts_found,
+            "backlinks_found": backlinks_found,
+            "qualified_opportunities": qualified,
+            "emails_generated": emails_generated,
+            "fit_score": campaign.get("fit_score"),
+            "score_breakdown": campaign.get("score_breakdown"),
+            "average_da": avg_da,
+            "live_backlinks": live_links,
+            "strategy": campaign.get("strategy", "guest_post")
+        }
+    except HTTPException:
+        raise
+    except Exception as exc:
+        import logging; logging.getLogger(__name__).error(f"analytics error: {exc}", exc_info=True)
+        return db_error_response(exc)
 
 # ──────────────── Verification & Mocking (Phases 4/5) ────────────────
 
