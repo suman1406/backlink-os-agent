@@ -637,7 +637,7 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                 <Metric 
                   icon={BrainCircuit} 
                   label="Strategy" 
-                  value={String(campaign?.analytics?.strategy || campaign?.strategy || "guest_post").replace(/_/g, " ")} 
+                  value={String(campaign?.analytics?.strategy || (campaign as any)?.strategy || "guest_post").replace(/_/g, " ")} 
                   tooltip={campaign?.search_queries?.length > 0 ? `Query: ${campaign.search_queries[0]}` : "AI selected backlink strategy."}
                 />
                 <Metric icon={LinkIcon} label="Live Links [MOCK]" value={analyticsData?.live_backlinks > 0 ? analyticsData.live_backlinks : 14} color="text-emerald-400" tooltip="Actual backlink placement requires CMS credentials or authorization for third-party sites which we don't have, so this metric is simulated." />
