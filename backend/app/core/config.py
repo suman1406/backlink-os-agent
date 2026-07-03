@@ -14,8 +14,6 @@ class Settings(BaseSettings):
     MONGODB_URI: str = "mongodb://localhost:27017/outreach_platform"
     
     # Providers
-    LLM_PROVIDER: str = "nvidia"
-    DEFAULT_MODEL: str = "deepseek-ai/deepseek-v4-flash"
     USE_MOCK_SEARCH: bool = False
     USE_MOCK_CRAWLER: bool = False
     
@@ -25,9 +23,6 @@ class Settings(BaseSettings):
     FIRECRAWL_API_KEY: Optional[str] = None
     GROQ_API_KEY: Optional[str] = None
     CEREBRAS_API_KEY: Optional[str] = None
-    NVIDIA_NIM_API_KEY: Optional[str] = None
-    OPENROUTER_API_KEY: Optional[str] = None
-    OPENROUTER_MODEL: str = "openai/gpt-4o-mini"
     
     # Email
     SMTP_HOST: str = "smtp.gmail.com"
