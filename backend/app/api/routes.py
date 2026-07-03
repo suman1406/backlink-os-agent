@@ -456,7 +456,8 @@ async def get_campaign_analytics(campaign_id: str):
         agg_stats = doc
         break
         
-    avg_da = round(agg_stats.get("avg_da", 0), 1) if agg_stats else 0
+    raw_avg_da = agg_stats.get("avg_da") if agg_stats else None
+    avg_da = round(raw_avg_da, 1) if raw_avg_da is not None else 0
     live_links = agg_stats.get("live_links", 0) if agg_stats else 0
 
     return {
