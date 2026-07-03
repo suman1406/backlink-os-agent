@@ -1,0 +1,1334 @@
+﻿{
+    "campaign_id":  "camp-1783044431915",
+    "created_at":  "2026-07-03T02:07:11.941000",
+    "our_url":  "https://www.optum.com/en/",
+    "status":  "completed",
+    "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+    "updated_at":  "2026-07-03T02:07:36.174000",
+    "analytics":  {
+                      "pipeline_confidence":  1.0
+                  },
+    "logs":  [
+                 {
+                     "agent":  "OutreachGenerator",
+                     "task":  "Generate email",
+                     "duration":  0.819999999999709,
+                     "status":  "outreach_generated",
+                     "model":  "llama-3.1-8b-instant",
+                     "provider":  "groq",
+                     "is_simulated":  false,
+                     "timestamp":  "2026-07-03T02:07:36.167815"
+                 }
+             ],
+    "node_runs":  {
+                      "analyze_business":  {
+                                               "node":  "analyze_business",
+                                               "campaign_id":  "camp-1783044431915",
+                                               "agent":  "BusinessIntelligence",
+                                               "api_source":  "cerebras",
+                                               "cache_state":  "live",
+                                               "confidence":  0.35,
+                                               "duration":  1.9360000000015134,
+                                               "error":  null,
+                                               "is_simulated":  false,
+                                               "model":  "gpt-oss-120b",
+                                               "provider":  "cerebras",
+                                               "provider_purpose":  "llm-summarization",
+                                               "raw_input":  {
+                                                                 "campaign_id":  "camp-1783044431915",
+                                                                 "our_url":  "https://www.optum.com/en/",
+                                                                 "target_url":  "",
+                                                                 "bi_insights":  null,
+                                                                 "business_profile":  {
+
+                                                                                      },
+                                                                 "keywords":  [
+
+                                                                              ],
+                                                                 "competitors":  [
+
+                                                                                 ],
+                                                                 "services":  [
+
+                                                                              ],
+                                                                 "opportunity_qualified":  false,
+                                                                 "qualification_reason":  null,
+                                                                 "fit_score":  0,
+                                                                 "contact_info":  {
+
+                                                                                  },
+                                                                 "analytics":  {
+                                                                                   "pipeline_confidence":  0.15
+                                                                               },
+                                                                 "status":  "website_crawled"
+                                                             },
+                                               "raw_output":  {
+                                                                  "our_analysis":  "{\n  \"company_name\": \"Optum\",\n  \"industry\": \"Healthcare / Health Services / Health Technology\",\n  \"audience\": [\n    \"Individual consumers/patients\",\n    \"Families\",\n    \"Employers and employee benefit plans\",\n    \"Healthcare providers seeking technology solutions\"\n  ],\n  \"value_props\": [\n    \"Comprehensive, integrated health services that combine care, finance, and pharmacy\",\n    \"Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses\",\n    \"24/7 access to... [truncated 1461 chars]",
+                                                                  "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2... [truncated 1390 chars]",
+                                                                  "business_profile":  {
+                                                                                           "company_name":  "Optum",
+                                                                                           "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                           "audience":  [
+                                                                                                            "Individual consumers/patients",
+                                                                                                            "Families",
+                                                                                                            "Employers and employee benefit plans",
+                                                                                                            "Healthcare providers seeking technology solutions"
+                                                                                                        ],
+                                                                                           "value_props":  [
+                                                                                                               "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                               "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                               "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                               "Easy location of nearby care facilities and providers",
+                                                                                                               "Educational health and wellness content to empower healthier living"
+                                                                                                           ],
+                                                                                           "products":  [
+                                                                                                            "Find care near you (location finder)",
+                                                                                                            "Medical bill payment platform",
+                                                                                                            "HSA/FSA management and prepaid cards",
+                                                                                                            "OptumRx online pharmacy and Home Delivery service",
+                                                                                                            "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                            "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                            "Career portal for Optum jobs",
+                                                                                                            "Customer support hub"
+                                                                                                        ],
+                                                                                           "evidence":  [
+                                                                                                            "Find care near you â link to care locations page",
+                                                                                                            "Pay a medical bill â link to billâpay page",
+                                                                                                            "Manage an HSA or FSA â link to financial services page",
+                                                                                                            "Fill a prescription â link to OptumRx",
+                                                                                                            "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                            "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                            "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                            "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                            "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                        ],
+                                                                                           "confidence":  0.94
+                                                                                       },
+                                                                  "analytics":  {
+                                                                                    "bi_confidence":  0.94
+                                                                                },
+                                                                  "status":  "bi_generated"
+                                                              },
+                                               "retry_count":  0,
+                                               "score_breakdown":  null,
+                                               "status":  "bi_generated",
+                                               "structured_json":  {
+                                                                       "our_analysis":  "{\n  \"company_name\": \"Optum\",\n  \"industry\": \"Healthcare / Health Services / Health Technology\",\n  \"audience\": [\n    \"Individual consumers/patients\",\n    \"Families\",\n    \"Employers and employee benefit plans\",\n    \"Healthcare providers seeking technology solutions\"\n  ],\n  \"value_props\": [\n    \"Comprehensive, integrated health services that combine care, finance, and pharmacy\",\n    \"Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses\",\n    \"24/7 access to... [truncated 1461 chars]",
+                                                                       "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2... [truncated 1390 chars]",
+                                                                       "business_profile":  {
+                                                                                                "company_name":  "Optum",
+                                                                                                "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                                "audience":  [
+                                                                                                                 "Individual consumers/patients",
+                                                                                                                 "Families",
+                                                                                                                 "Employers and employee benefit plans",
+                                                                                                                 "Healthcare providers seeking technology solutions"
+                                                                                                             ],
+                                                                                                "value_props":  [
+                                                                                                                    "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                                    "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                                    "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                                    "Easy location of nearby care facilities and providers",
+                                                                                                                    "Educational health and wellness content to empower healthier living"
+                                                                                                                ],
+                                                                                                "products":  [
+                                                                                                                 "Find care near you (location finder)",
+                                                                                                                 "Medical bill payment platform",
+                                                                                                                 "HSA/FSA management and prepaid cards",
+                                                                                                                 "OptumRx online pharmacy and Home Delivery service",
+                                                                                                                 "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                                 "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                                 "Career portal for Optum jobs",
+                                                                                                                 "Customer support hub"
+                                                                                                             ],
+                                                                                                "evidence":  [
+                                                                                                                 "Find care near you â link to care locations page",
+                                                                                                                 "Pay a medical bill â link to billâpay page",
+                                                                                                                 "Manage an HSA or FSA â link to financial services page",
+                                                                                                                 "Fill a prescription â link to OptumRx",
+                                                                                                                 "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                                 "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                                 "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                                 "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                                 "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                             ],
+                                                                                                "confidence":  0.94
+                                                                                            },
+                                                                       "analytics":  {
+                                                                                         "bi_confidence":  0.94
+                                                                                     },
+                                                                       "status":  "bi_generated"
+                                                                   },
+                                               "task":  "Analyze business",
+                                               "timestamp":  "2026-07-03T02:07:17.422000",
+                                               "updated_at":  "2026-07-03T02:07:17.425000"
+                                           },
+                      "crawl_website":  {
+                                            "node":  "crawl_website",
+                                            "campaign_id":  "camp-1783044431915",
+                                            "agent":  "CrawlerAgent",
+                                            "api_source":  "Firecrawl",
+                                            "cache_state":  "live",
+                                            "confidence":  0.15,
+                                            "duration":  3.5270000000018626,
+                                            "error":  null,
+                                            "is_simulated":  false,
+                                            "model":  "gemini-2.5-flash",
+                                            "provider":  "Firecrawl",
+                                            "provider_purpose":  "crawler",
+                                            "raw_input":  {
+                                                              "campaign_id":  "camp-1783044431915",
+                                                              "our_url":  "https://www.optum.com/en/",
+                                                              "target_url":  "",
+                                                              "bi_insights":  null,
+                                                              "business_profile":  {
+
+                                                                                   },
+                                                              "keywords":  [
+
+                                                                           ],
+                                                              "competitors":  [
+
+                                                                              ],
+                                                              "services":  [
+
+                                                                           ],
+                                                              "opportunity_qualified":  false,
+                                                              "qualification_reason":  null,
+                                                              "fit_score":  0,
+                                                              "contact_info":  {
+
+                                                                               },
+                                                              "analytics":  {
+
+                                                                            },
+                                                              "status":  "queued"
+                                                          },
+                                            "raw_output":  {
+                                                               "our_content":  "[Skip to Data Use Notice](https://www.optum.com/en/#o5-legal-banner-container) [Skip to main content](https://www.optum.com/en/#main-content)\n\n![Optum nurse smiling ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/health-care-you-can-count-on.jpg)![Optum nurse smiling ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/health-care-you-can-count-on-mobile.jpg)\n\n# Health care you can count on\n\n- [![](https://www.optum.com/content/dam/optum4/iconography-resources/... [truncated 5012 chars]",
+                                                               "status":  "website_crawled"
+                                                           },
+                                            "retry_count":  0,
+                                            "score_breakdown":  null,
+                                            "status":  "website_crawled",
+                                            "structured_json":  {
+                                                                    "our_content":  "[Skip to Data Use Notice](https://www.optum.com/en/#o5-legal-banner-container) [Skip to main content](https://www.optum.com/en/#main-content)\n\n![Optum nurse smiling ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/health-care-you-can-count-on.jpg)![Optum nurse smiling ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/health-care-you-can-count-on-mobile.jpg)\n\n# Health care you can count on\n\n- [![](https://www.optum.com/content/dam/optum4/iconography-resources/... [truncated 5012 chars]",
+                                                                    "status":  "website_crawled"
+                                                                },
+                                            "task":  "Crawl website",
+                                            "timestamp":  "2026-07-03T02:07:15.480000",
+                                            "updated_at":  "2026-07-03T02:07:15.482000"
+                                        },
+                      "discover_backlinks":  {
+                                                 "node":  "discover_backlinks",
+                                                 "campaign_id":  "camp-1783044431915",
+                                                 "agent":  "BacklinkDiscovery",
+                                                 "api_source":  "Tavily+Firecrawl",
+                                                 "cache_state":  "live",
+                                                 "confidence":  0.65,
+                                                 "duration":  9.877000000000407,
+                                                 "error":  null,
+                                                 "is_simulated":  false,
+                                                 "model":  "gemini-2.5-flash",
+                                                 "provider":  "Tavily+Firecrawl",
+                                                 "provider_purpose":  "search+crawler",
+                                                 "raw_input":  {
+                                                                   "campaign_id":  "camp-1783044431915",
+                                                                   "our_url":  "https://www.optum.com/en/",
+                                                                   "target_url":  "",
+                                                                   "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                   "business_profile":  {
+                                                                                            "company_name":  "Optum",
+                                                                                            "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                            "audience":  [
+                                                                                                             "Individual consumers/patients",
+                                                                                                             "Families",
+                                                                                                             "Employers and employee benefit plans",
+                                                                                                             "Healthcare providers seeking technology solutions"
+                                                                                                         ],
+                                                                                            "value_props":  [
+                                                                                                                "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                                "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                                "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                                "Easy location of nearby care facilities and providers",
+                                                                                                                "Educational health and wellness content to empower healthier living"
+                                                                                                            ],
+                                                                                            "products":  [
+                                                                                                             "Find care near you (location finder)",
+                                                                                                             "Medical bill payment platform",
+                                                                                                             "HSA/FSA management and prepaid cards",
+                                                                                                             "OptumRx online pharmacy and Home Delivery service",
+                                                                                                             "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                             "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                             "Career portal for Optum jobs",
+                                                                                                             "Customer support hub"
+                                                                                                         ],
+                                                                                            "evidence":  [
+                                                                                                             "Find care near you â link to care locations page",
+                                                                                                             "Pay a medical bill â link to billâpay page",
+                                                                                                             "Manage an HSA or FSA â link to financial services page",
+                                                                                                             "Fill a prescription â link to OptumRx",
+                                                                                                             "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                             "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                             "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                             "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                             "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                         ],
+                                                                                            "confidence":  0.94
+                                                                                        },
+                                                                   "keywords":  [
+                                                                                    "online pharmacy home delivery",
+                                                                                    "HSA and FSA prepaid card benefits",
+                                                                                    "find healthcare providers near me",
+                                                                                    "medical bill payment platform",
+                                                                                    "patient portal health records access",
+                                                                                    "24/7 licensed pharmacist support",
+                                                                                    "health and wellness articles library",
+                                                                                    "healthcare cost savings with HSA/FSA"
+                                                                                ],
+                                                                   "competitors":  [
+                                                                                       "CVS Health",
+                                                                                       "Cigna",
+                                                                                       "Walgreens Boots Alliance"
+                                                                                   ],
+                                                                   "services":  [
+
+                                                                                ],
+                                                                   "opportunity_qualified":  false,
+                                                                   "qualification_reason":  null,
+                                                                   "fit_score":  0,
+                                                                   "contact_info":  {
+
+                                                                                    },
+                                                                   "analytics":  {
+                                                                                     "pipeline_confidence":  0.65,
+                                                                                     "bi_confidence":  0.94,
+                                                                                     "keyword_confidence":  0.905
+                                                                                 },
+                                                                   "status":  "competitors_discovered"
+                                                               },
+                                                 "raw_output":  {
+                                                                    "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                    "target_content":  "Skip To ContentSkip To Search\n\nOnline Pharmacy and Home Delivery\n\n# Online Pharmacy \u0026 HomeÂ Delivery\n\n## Save Time with Home Delivery\n\n**_$0 Delivery fee until 12/31/2026.\\*_**\n\nThe ultimate in convenience! Save time with a prescription delivery directly to your mailbox, anywhere in the United States. Whether youâre a snowbird for the winter or simply prefer the convenience, prescription delivery is just one more way we can deliver the incredible service you expect.\n\n- Standard Delivery for $1 pe... [truncated 6779 chars]",
+                                                                    "status":  "backlinks_discovered"
+                                                                },
+                                                 "retry_count":  0,
+                                                 "score_breakdown":  null,
+                                                 "status":  "backlinks_discovered",
+                                                 "structured_json":  {
+                                                                         "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                         "target_content":  "Skip To ContentSkip To Search\n\nOnline Pharmacy and Home Delivery\n\n# Online Pharmacy \u0026 HomeÂ Delivery\n\n## Save Time with Home Delivery\n\n**_$0 Delivery fee until 12/31/2026.\\*_**\n\nThe ultimate in convenience! Save time with a prescription delivery directly to your mailbox, anywhere in the United States. Whether youâre a snowbird for the winter or simply prefer the convenience, prescription delivery is just one more way we can deliver the incredible service you expect.\n\n- Standard Delivery for $1 pe... [truncated 6779 chars]",
+                                                                         "status":  "backlinks_discovered"
+                                                                     },
+                                                 "task":  "Discover targets",
+                                                 "timestamp":  "2026-07-03T02:07:29.965000",
+                                                 "updated_at":  "2026-07-03T02:07:29.967000"
+                                             },
+                      "discover_competitors":  {
+                                                   "node":  "discover_competitors",
+                                                   "campaign_id":  "camp-1783044431915",
+                                                   "agent":  "CompetitorDiscovery",
+                                                   "api_source":  "cerebras",
+                                                   "cache_state":  "live",
+                                                   "confidence":  0.65,
+                                                   "duration":  1.135999999998603,
+                                                   "error":  null,
+                                                   "is_simulated":  false,
+                                                   "model":  "gpt-oss-120b",
+                                                   "provider":  "cerebras",
+                                                   "provider_purpose":  "llm-reasoning",
+                                                   "raw_input":  {
+                                                                     "campaign_id":  "camp-1783044431915",
+                                                                     "our_url":  "https://www.optum.com/en/",
+                                                                     "target_url":  "",
+                                                                     "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                     "business_profile":  {
+                                                                                              "company_name":  "Optum",
+                                                                                              "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                              "audience":  [
+                                                                                                               "Individual consumers/patients",
+                                                                                                               "Families",
+                                                                                                               "Employers and employee benefit plans",
+                                                                                                               "Healthcare providers seeking technology solutions"
+                                                                                                           ],
+                                                                                              "value_props":  [
+                                                                                                                  "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                                  "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                                  "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                                  "Easy location of nearby care facilities and providers",
+                                                                                                                  "Educational health and wellness content to empower healthier living"
+                                                                                                              ],
+                                                                                              "products":  [
+                                                                                                               "Find care near you (location finder)",
+                                                                                                               "Medical bill payment platform",
+                                                                                                               "HSA/FSA management and prepaid cards",
+                                                                                                               "OptumRx online pharmacy and Home Delivery service",
+                                                                                                               "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                               "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                               "Career portal for Optum jobs",
+                                                                                                               "Customer support hub"
+                                                                                                           ],
+                                                                                              "evidence":  [
+                                                                                                               "Find care near you â link to care locations page",
+                                                                                                               "Pay a medical bill â link to billâpay page",
+                                                                                                               "Manage an HSA or FSA â link to financial services page",
+                                                                                                               "Fill a prescription â link to OptumRx",
+                                                                                                               "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                               "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                               "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                               "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                               "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                           ],
+                                                                                              "confidence":  0.94
+                                                                                          },
+                                                                     "keywords":  [
+                                                                                      "online pharmacy home delivery",
+                                                                                      "HSA and FSA prepaid card benefits",
+                                                                                      "find healthcare providers near me",
+                                                                                      "medical bill payment platform",
+                                                                                      "patient portal health records access",
+                                                                                      "24/7 licensed pharmacist support",
+                                                                                      "health and wellness articles library",
+                                                                                      "healthcare cost savings with HSA/FSA"
+                                                                                  ],
+                                                                     "competitors":  [
+
+                                                                                     ],
+                                                                     "services":  [
+
+                                                                                  ],
+                                                                     "opportunity_qualified":  false,
+                                                                     "qualification_reason":  null,
+                                                                     "fit_score":  0,
+                                                                     "contact_info":  {
+
+                                                                                      },
+                                                                     "analytics":  {
+                                                                                       "pipeline_confidence":  0.5,
+                                                                                       "bi_confidence":  0.94,
+                                                                                       "keyword_confidence":  0.905
+                                                                                   },
+                                                                     "status":  "keywords_extracted"
+                                                                 },
+                                                   "raw_output":  {
+                                                                      "competitors":  [
+                                                                                          "CVS Health",
+                                                                                          "Cigna",
+                                                                                          "Walgreens Boots Alliance"
+                                                                                      ],
+                                                                      "status":  "competitors_discovered"
+                                                                  },
+                                                   "retry_count":  0,
+                                                   "score_breakdown":  null,
+                                                   "status":  "competitors_discovered",
+                                                   "structured_json":  {
+                                                                           "competitors":  [
+                                                                                               "CVS Health",
+                                                                                               "Cigna",
+                                                                                               "Walgreens Boots Alliance"
+                                                                                           ],
+                                                                           "status":  "competitors_discovered"
+                                                                       },
+                                                   "task":  "Extract competitors",
+                                                   "timestamp":  "2026-07-03T02:07:20.084000",
+                                                   "updated_at":  "2026-07-03T02:07:20.086000"
+                                               },
+                      "discover_contacts":  {
+                                                "node":  "discover_contacts",
+                                                "campaign_id":  "camp-1783044431915",
+                                                "agent":  "ContactDiscovery",
+                                                "api_source":  "cerebras",
+                                                "cache_state":  "live",
+                                                "confidence":  0.85,
+                                                "duration":  3.098999999998341,
+                                                "error":  null,
+                                                "is_simulated":  false,
+                                                "model":  "gpt-oss-120b",
+                                                "provider":  "cerebras",
+                                                "provider_purpose":  "search+llm-extraction",
+                                                "raw_input":  {
+                                                                  "campaign_id":  "camp-1783044431915",
+                                                                  "our_url":  "https://www.optum.com/en/",
+                                                                  "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                  "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                  "business_profile":  {
+                                                                                           "company_name":  "Optum",
+                                                                                           "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                           "audience":  [
+                                                                                                            "Individual consumers/patients",
+                                                                                                            "Families",
+                                                                                                            "Employers and employee benefit plans",
+                                                                                                            "Healthcare providers seeking technology solutions"
+                                                                                                        ],
+                                                                                           "value_props":  [
+                                                                                                               "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                               "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                               "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                               "Easy location of nearby care facilities and providers",
+                                                                                                               "Educational health and wellness content to empower healthier living"
+                                                                                                           ],
+                                                                                           "products":  [
+                                                                                                            "Find care near you (location finder)",
+                                                                                                            "Medical bill payment platform",
+                                                                                                            "HSA/FSA management and prepaid cards",
+                                                                                                            "OptumRx online pharmacy and Home Delivery service",
+                                                                                                            "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                            "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                            "Career portal for Optum jobs",
+                                                                                                            "Customer support hub"
+                                                                                                        ],
+                                                                                           "evidence":  [
+                                                                                                            "Find care near you â link to care locations page",
+                                                                                                            "Pay a medical bill â link to billâpay page",
+                                                                                                            "Manage an HSA or FSA â link to financial services page",
+                                                                                                            "Fill a prescription â link to OptumRx",
+                                                                                                            "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                            "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                            "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                            "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                            "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                        ],
+                                                                                           "confidence":  0.94
+                                                                                       },
+                                                                  "keywords":  [
+                                                                                   "online pharmacy home delivery",
+                                                                                   "HSA and FSA prepaid card benefits",
+                                                                                   "find healthcare providers near me",
+                                                                                   "medical bill payment platform",
+                                                                                   "patient portal health records access",
+                                                                                   "24/7 licensed pharmacist support",
+                                                                                   "health and wellness articles library",
+                                                                                   "healthcare cost savings with HSA/FSA"
+                                                                               ],
+                                                                  "competitors":  [
+                                                                                      "CVS Health",
+                                                                                      "Cigna",
+                                                                                      "Walgreens Boots Alliance"
+                                                                                  ],
+                                                                  "services":  [
+
+                                                                               ],
+                                                                  "opportunity_qualified":  false,
+                                                                  "qualification_reason":  null,
+                                                                  "fit_score":  0,
+                                                                  "contact_info":  {
+
+                                                                                   },
+                                                                  "analytics":  {
+                                                                                    "pipeline_confidence":  0.65,
+                                                                                    "bi_confidence":  0.94,
+                                                                                    "keyword_confidence":  0.905
+                                                                                },
+                                                                  "status":  "backlinks_discovered"
+                                                              },
+                                                "raw_output":  {
+                                                                   "contact_info":  {
+                                                                                        "email":  "pharmacy@wegmans.com",
+                                                                                        "name":  "Www Team",
+                                                                                        "source":  "llm_extraction",
+                                                                                        "verification_status":  "unverified_llm_extracted",
+                                                                                        "contact_type":  "general",
+                                                                                        "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                        "confidence":  0.5
+                                                                                    },
+                                                                   "status":  "contacts_discovered",
+                                                                   "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery"
+                                                               },
+                                                "retry_count":  0,
+                                                "score_breakdown":  null,
+                                                "status":  "contacts_discovered",
+                                                "structured_json":  {
+                                                                        "contact_info":  {
+                                                                                             "email":  "pharmacy@wegmans.com",
+                                                                                             "name":  "Www Team",
+                                                                                             "source":  "llm_extraction",
+                                                                                             "verification_status":  "unverified_llm_extracted",
+                                                                                             "contact_type":  "general",
+                                                                                             "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                             "confidence":  0.5
+                                                                                         },
+                                                                        "status":  "contacts_discovered",
+                                                                        "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery"
+                                                                    },
+                                                "task":  "Discover contacts",
+                                                "timestamp":  "2026-07-03T02:07:33.069000",
+                                                "updated_at":  "2026-07-03T02:07:33.071000"
+                                            },
+                      "extract_keywords":  {
+                                               "node":  "extract_keywords",
+                                               "campaign_id":  "camp-1783044431915",
+                                               "agent":  "KeywordExtraction",
+                                               "api_source":  "cerebras",
+                                               "cache_state":  "live",
+                                               "confidence":  0.5,
+                                               "duration":  0.8439999999973224,
+                                               "error":  null,
+                                               "is_simulated":  false,
+                                               "model":  "gpt-oss-120b",
+                                               "provider":  "cerebras",
+                                               "provider_purpose":  "llm-classification",
+                                               "raw_input":  {
+                                                                 "campaign_id":  "camp-1783044431915",
+                                                                 "our_url":  "https://www.optum.com/en/",
+                                                                 "target_url":  "",
+                                                                 "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                 "business_profile":  {
+                                                                                          "company_name":  "Optum",
+                                                                                          "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                          "audience":  [
+                                                                                                           "Individual consumers/patients",
+                                                                                                           "Families",
+                                                                                                           "Employers and employee benefit plans",
+                                                                                                           "Healthcare providers seeking technology solutions"
+                                                                                                       ],
+                                                                                          "value_props":  [
+                                                                                                              "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                              "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                              "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                              "Easy location of nearby care facilities and providers",
+                                                                                                              "Educational health and wellness content to empower healthier living"
+                                                                                                          ],
+                                                                                          "products":  [
+                                                                                                           "Find care near you (location finder)",
+                                                                                                           "Medical bill payment platform",
+                                                                                                           "HSA/FSA management and prepaid cards",
+                                                                                                           "OptumRx online pharmacy and Home Delivery service",
+                                                                                                           "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                           "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                           "Career portal for Optum jobs",
+                                                                                                           "Customer support hub"
+                                                                                                       ],
+                                                                                          "evidence":  [
+                                                                                                           "Find care near you â link to care locations page",
+                                                                                                           "Pay a medical bill â link to billâpay page",
+                                                                                                           "Manage an HSA or FSA â link to financial services page",
+                                                                                                           "Fill a prescription â link to OptumRx",
+                                                                                                           "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                           "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                           "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                           "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                           "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                       ],
+                                                                                          "confidence":  0.94
+                                                                                      },
+                                                                 "keywords":  [
+
+                                                                              ],
+                                                                 "competitors":  [
+
+                                                                                 ],
+                                                                 "services":  [
+
+                                                                              ],
+                                                                 "opportunity_qualified":  false,
+                                                                 "qualification_reason":  null,
+                                                                 "fit_score":  0,
+                                                                 "contact_info":  {
+
+                                                                                  },
+                                                                 "analytics":  {
+                                                                                   "pipeline_confidence":  0.5,
+                                                                                   "bi_confidence":  0.94
+                                                                               },
+                                                                 "status":  "strategy_planned"
+                                                             },
+                                               "raw_output":  {
+                                                                  "keywords":  [
+                                                                                   "online pharmacy home delivery",
+                                                                                   "HSA and FSA prepaid card benefits",
+                                                                                   "find healthcare providers near me",
+                                                                                   "medical bill payment platform",
+                                                                                   "patient portal health records access",
+                                                                                   "24/7 licensed pharmacist support",
+                                                                                   "health and wellness articles library",
+                                                                                   "healthcare cost savings with HSA/FSA"
+                                                                               ],
+                                                                  "analytics":  {
+                                                                                    "keyword_confidence":  0.905
+                                                                                },
+                                                                  "status":  "keywords_extracted"
+                                                              },
+                                               "retry_count":  0,
+                                               "score_breakdown":  null,
+                                               "status":  "keywords_extracted",
+                                               "structured_json":  {
+                                                                       "keywords":  [
+                                                                                        "online pharmacy home delivery",
+                                                                                        "HSA and FSA prepaid card benefits",
+                                                                                        "find healthcare providers near me",
+                                                                                        "medical bill payment platform",
+                                                                                        "patient portal health records access",
+                                                                                        "24/7 licensed pharmacist support",
+                                                                                        "health and wellness articles library",
+                                                                                        "healthcare cost savings with HSA/FSA"
+                                                                                    ],
+                                                                       "analytics":  {
+                                                                                         "keyword_confidence":  0.905
+                                                                                     },
+                                                                       "status":  "keywords_extracted"
+                                                                   },
+                                               "task":  "Extract keywords",
+                                               "timestamp":  "2026-07-03T02:07:18.949000",
+                                               "updated_at":  "2026-07-03T02:07:18.951000"
+                                           },
+                      "extract_services":  {
+                                               "node":  "extract_services",
+                                               "campaign_id":  "camp-1783044431915",
+                                               "agent":  "ServiceExtraction",
+                                               "api_source":  "cerebras",
+                                               "cache_state":  "live",
+                                               "confidence":  1.0,
+                                               "duration":  0.4819999999999709,
+                                               "error":  null,
+                                               "is_simulated":  false,
+                                               "model":  "gpt-oss-120b",
+                                               "provider":  "cerebras",
+                                               "provider_purpose":  "llm-classification",
+                                               "raw_input":  {
+                                                                 "campaign_id":  "camp-1783044431915",
+                                                                 "our_url":  "https://www.optum.com/en/",
+                                                                 "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                 "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                 "business_profile":  {
+                                                                                          "company_name":  "Optum",
+                                                                                          "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                          "audience":  [
+                                                                                                           "Individual consumers/patients",
+                                                                                                           "Families",
+                                                                                                           "Employers and employee benefit plans",
+                                                                                                           "Healthcare providers seeking technology solutions"
+                                                                                                       ],
+                                                                                          "value_props":  [
+                                                                                                              "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                              "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                              "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                              "Easy location of nearby care facilities and providers",
+                                                                                                              "Educational health and wellness content to empower healthier living"
+                                                                                                          ],
+                                                                                          "products":  [
+                                                                                                           "Find care near you (location finder)",
+                                                                                                           "Medical bill payment platform",
+                                                                                                           "HSA/FSA management and prepaid cards",
+                                                                                                           "OptumRx online pharmacy and Home Delivery service",
+                                                                                                           "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                           "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                           "Career portal for Optum jobs",
+                                                                                                           "Customer support hub"
+                                                                                                       ],
+                                                                                          "evidence":  [
+                                                                                                           "Find care near you â link to care locations page",
+                                                                                                           "Pay a medical bill â link to billâpay page",
+                                                                                                           "Manage an HSA or FSA â link to financial services page",
+                                                                                                           "Fill a prescription â link to OptumRx",
+                                                                                                           "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                           "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                           "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                           "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                           "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                       ],
+                                                                                          "confidence":  0.94
+                                                                                      },
+                                                                 "keywords":  [
+                                                                                  "online pharmacy home delivery",
+                                                                                  "HSA and FSA prepaid card benefits",
+                                                                                  "find healthcare providers near me",
+                                                                                  "medical bill payment platform",
+                                                                                  "patient portal health records access",
+                                                                                  "24/7 licensed pharmacist support",
+                                                                                  "health and wellness articles library",
+                                                                                  "healthcare cost savings with HSA/FSA"
+                                                                              ],
+                                                                 "competitors":  [
+                                                                                     "CVS Health",
+                                                                                     "Cigna",
+                                                                                     "Walgreens Boots Alliance"
+                                                                                 ],
+                                                                 "services":  [
+
+                                                                              ],
+                                                                 "opportunity_qualified":  false,
+                                                                 "qualification_reason":  null,
+                                                                 "fit_score":  0,
+                                                                 "contact_info":  {
+                                                                                      "email":  "pharmacy@wegmans.com",
+                                                                                      "name":  "Www Team",
+                                                                                      "source":  "llm_extraction",
+                                                                                      "verification_status":  "unverified_llm_extracted",
+                                                                                      "contact_type":  "general",
+                                                                                      "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                      "confidence":  0.5
+                                                                                  },
+                                                                 "analytics":  {
+                                                                                   "pipeline_confidence":  0.85,
+                                                                                   "bi_confidence":  0.94,
+                                                                                   "keyword_confidence":  0.905
+                                                                               },
+                                                                 "status":  "contacts_discovered"
+                                                             },
+                                               "raw_output":  {
+                                                                  "services":  [
+                                                                                   "Medical bill payment platform",
+                                                                                   "Home delivery pharmacy (OptumRx)",
+                                                                                   "HSA/FSA management and prepaid cards"
+                                                                               ],
+                                                                  "status":  "services_extracted",
+                                                                  "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                  "contact_info":  {
+                                                                                       "email":  "pharmacy@wegmans.com",
+                                                                                       "name":  "Www Team",
+                                                                                       "source":  "llm_extraction",
+                                                                                       "verification_status":  "unverified_llm_extracted",
+                                                                                       "contact_type":  "general",
+                                                                                       "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                       "confidence":  0.5
+                                                                                   }
+                                                              },
+                                               "retry_count":  0,
+                                               "score_breakdown":  null,
+                                               "status":  "services_extracted",
+                                               "structured_json":  {
+                                                                       "services":  [
+                                                                                        "Medical bill payment platform",
+                                                                                        "Home delivery pharmacy (OptumRx)",
+                                                                                        "HSA/FSA management and prepaid cards"
+                                                                                    ],
+                                                                       "status":  "services_extracted",
+                                                                       "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                       "contact_info":  {
+                                                                                            "email":  "pharmacy@wegmans.com",
+                                                                                            "name":  "Www Team",
+                                                                                            "source":  "llm_extraction",
+                                                                                            "verification_status":  "unverified_llm_extracted",
+                                                                                            "contact_type":  "general",
+                                                                                            "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                            "confidence":  0.5
+                                                                                        }
+                                                                   },
+                                               "task":  "Extract services",
+                                               "timestamp":  "2026-07-03T02:07:33.556000",
+                                               "updated_at":  "2026-07-03T02:07:33.558000"
+                                           },
+                      "generate_outreach":  {
+                                                "node":  "generate_outreach",
+                                                "campaign_id":  "camp-1783044431915",
+                                                "agent":  "OutreachGenerator",
+                                                "api_source":  "groq",
+                                                "cache_state":  "live",
+                                                "confidence":  1.0,
+                                                "duration":  0.819999999999709,
+                                                "error":  null,
+                                                "is_simulated":  false,
+                                                "model":  "llama-3.1-8b-instant",
+                                                "provider":  "groq",
+                                                "provider_purpose":  "llm-copywriting",
+                                                "raw_input":  {
+                                                                  "campaign_id":  "camp-1783044431915",
+                                                                  "our_url":  "https://www.optum.com/en/",
+                                                                  "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                  "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                  "business_profile":  {
+                                                                                           "company_name":  "Optum",
+                                                                                           "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                           "audience":  [
+                                                                                                            "Individual consumers/patients",
+                                                                                                            "Families",
+                                                                                                            "Employers and employee benefit plans",
+                                                                                                            "Healthcare providers seeking technology solutions"
+                                                                                                        ],
+                                                                                           "value_props":  [
+                                                                                                               "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                               "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                               "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                               "Easy location of nearby care facilities and providers",
+                                                                                                               "Educational health and wellness content to empower healthier living"
+                                                                                                           ],
+                                                                                           "products":  [
+                                                                                                            "Find care near you (location finder)",
+                                                                                                            "Medical bill payment platform",
+                                                                                                            "HSA/FSA management and prepaid cards",
+                                                                                                            "OptumRx online pharmacy and Home Delivery service",
+                                                                                                            "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                            "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                            "Career portal for Optum jobs",
+                                                                                                            "Customer support hub"
+                                                                                                        ],
+                                                                                           "evidence":  [
+                                                                                                            "Find care near you â link to care locations page",
+                                                                                                            "Pay a medical bill â link to billâpay page",
+                                                                                                            "Manage an HSA or FSA â link to financial services page",
+                                                                                                            "Fill a prescription â link to OptumRx",
+                                                                                                            "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                            "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                            "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                            "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                            "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                        ],
+                                                                                           "confidence":  0.94
+                                                                                       },
+                                                                  "keywords":  [
+                                                                                   "online pharmacy home delivery",
+                                                                                   "HSA and FSA prepaid card benefits",
+                                                                                   "find healthcare providers near me",
+                                                                                   "medical bill payment platform",
+                                                                                   "patient portal health records access",
+                                                                                   "24/7 licensed pharmacist support",
+                                                                                   "health and wellness articles library",
+                                                                                   "healthcare cost savings with HSA/FSA"
+                                                                               ],
+                                                                  "competitors":  [
+                                                                                      "CVS Health",
+                                                                                      "Cigna",
+                                                                                      "Walgreens Boots Alliance"
+                                                                                  ],
+                                                                  "services":  [
+                                                                                   "Medical bill payment platform",
+                                                                                   "Home delivery pharmacy (OptumRx)",
+                                                                                   "HSA/FSA management and prepaid cards"
+                                                                               ],
+                                                                  "opportunity_qualified":  true,
+                                                                  "qualification_reason":  "{\"qualified\": true, \"fit_score\": 5, \"score_breakdown\": {\"industry_relevance\": 0.12, \"domain_authority\": 50, \"organic_traffic\": 85650, \"spam_score\": 50, \"content_freshness\": 1.0, \"keyword_overlap\": 0.22, \"editorial_relevance\": 0.0, \"contact_quality\": 1.0, \"llm_suggested_score\": 8, \"computed_raw\": 0.4, \"final_score\": 5}, \"reasons\": [{\"category\": \"Audience overlap\", \"description\": \"Optum\u0027s target audience includes individual consumers/patients, families, employers, and employee benefit plans, aligning with the potential audience for Wegmans\u0027 Home Delivery service.\"}, {\"category\": \"Value proposition alignment\", \"description\": \"Optum\u0027s value proposition of comprehensive, integrated health services aligns with Wegmans\u0027 Home Delivery service, which offers convenient digital tools and 24/7 access to licensed pharmacists.\"}, {\"category\": \"Product and service alignment\", \"description\": \"Optum offers a range of products and services, including OptumRx online pharmacy and Home Delivery service, which aligns with Wegmans\u0027 Home Delivery service.\"}], \"risks\": [{\"category\": \"Competition\", \"description\": \"There may be existing competitors in the online pharmacy and home delivery space that could po... [truncated 467 chars]",
+                                                                  "fit_score":  5,
+                                                                  "contact_info":  {
+                                                                                       "email":  "pharmacy@wegmans.com",
+                                                                                       "name":  "Www Team",
+                                                                                       "source":  "llm_extraction",
+                                                                                       "verification_status":  "unverified_llm_extracted",
+                                                                                       "contact_type":  "general",
+                                                                                       "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                       "confidence":  0.5
+                                                                                   },
+                                                                  "analytics":  {
+                                                                                    "pipeline_confidence":  1.0,
+                                                                                    "bi_confidence":  0.94,
+                                                                                    "keyword_confidence":  0.905,
+                                                                                    "qualification_confidence":  1.0
+                                                                                },
+                                                                  "status":  "opportunity_qualified"
+                                                              },
+                                                "raw_output":  {
+                                                                   "outreach_email":  {
+                                                                                          "subject":  "Make Your Health Care Dollars Go Further with Optum Home Delivery Pharmacy",
+                                                                                          "body":  "At Optum, we\u0027re committed to delivering comprehensive, integrated health services that combine care, finance, and pharmacy. Our Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists. With $0 delivery fee until 12/31/2026, you can save time and money. Learn how to choose Home Delivery for your prescriptions on our website.",
+                                                                                          "personalization_angle":  "Article and content from target site",
+                                                                                          "call_to_action":  "Learn how to choose Home Delivery for your prescriptions",
+                                                                                          "confidence":  0.94,
+                                                                                          "to_email":  "pharmacy@wegmans.com",
+                                                                                          "to_name":  "Www Team",
+                                                                                          "approval_status":  "pending_review"
+                                                                                      },
+                                                                   "status":  "outreach_generated",
+                                                                   "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                   "contact_info":  {
+                                                                                        "email":  "pharmacy@wegmans.com",
+                                                                                        "name":  "Www Team",
+                                                                                        "source":  "llm_extraction",
+                                                                                        "verification_status":  "unverified_llm_extracted",
+                                                                                        "contact_type":  "general",
+                                                                                        "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                        "confidence":  0.5
+                                                                                    }
+                                                               },
+                                                "retry_count":  0,
+                                                "score_breakdown":  null,
+                                                "status":  "outreach_generated",
+                                                "structured_json":  {
+                                                                        "outreach_email":  {
+                                                                                               "subject":  "Make Your Health Care Dollars Go Further with Optum Home Delivery Pharmacy",
+                                                                                               "body":  "At Optum, we\u0027re committed to delivering comprehensive, integrated health services that combine care, finance, and pharmacy. Our Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists. With $0 delivery fee until 12/31/2026, you can save time and money. Learn how to choose Home Delivery for your prescriptions on our website.",
+                                                                                               "personalization_angle":  "Article and content from target site",
+                                                                                               "call_to_action":  "Learn how to choose Home Delivery for your prescriptions",
+                                                                                               "confidence":  0.94,
+                                                                                               "to_email":  "pharmacy@wegmans.com",
+                                                                                               "to_name":  "Www Team",
+                                                                                               "approval_status":  "pending_review"
+                                                                                           },
+                                                                        "status":  "outreach_generated",
+                                                                        "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                        "contact_info":  {
+                                                                                             "email":  "pharmacy@wegmans.com",
+                                                                                             "name":  "Www Team",
+                                                                                             "source":  "llm_extraction",
+                                                                                             "verification_status":  "unverified_llm_extracted",
+                                                                                             "contact_type":  "general",
+                                                                                             "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                             "confidence":  0.5
+                                                                                         }
+                                                                    },
+                                                "task":  "Generate email",
+                                                "timestamp":  "2026-07-03T02:07:36.167000",
+                                                "updated_at":  "2026-07-03T02:07:36.171000"
+                                            },
+                      "qualify_opportunity":  {
+                                                  "node":  "qualify_opportunity",
+                                                  "campaign_id":  "camp-1783044431915",
+                                                  "agent":  "OpportunityQualification",
+                                                  "api_source":  "groq",
+                                                  "cache_state":  "live",
+                                                  "confidence":  1.0,
+                                                  "duration":  1.7749999999978172,
+                                                  "error":  null,
+                                                  "is_simulated":  false,
+                                                  "model":  "llama-3.1-8b-instant",
+                                                  "provider":  "groq",
+                                                  "provider_purpose":  "llm-qualification",
+                                                  "raw_input":  {
+                                                                    "campaign_id":  "camp-1783044431915",
+                                                                    "our_url":  "https://www.optum.com/en/",
+                                                                    "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                    "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                    "business_profile":  {
+                                                                                             "company_name":  "Optum",
+                                                                                             "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                             "audience":  [
+                                                                                                              "Individual consumers/patients",
+                                                                                                              "Families",
+                                                                                                              "Employers and employee benefit plans",
+                                                                                                              "Healthcare providers seeking technology solutions"
+                                                                                                          ],
+                                                                                             "value_props":  [
+                                                                                                                 "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                                 "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                                 "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                                 "Easy location of nearby care facilities and providers",
+                                                                                                                 "Educational health and wellness content to empower healthier living"
+                                                                                                             ],
+                                                                                             "products":  [
+                                                                                                              "Find care near you (location finder)",
+                                                                                                              "Medical bill payment platform",
+                                                                                                              "HSA/FSA management and prepaid cards",
+                                                                                                              "OptumRx online pharmacy and Home Delivery service",
+                                                                                                              "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                              "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                              "Career portal for Optum jobs",
+                                                                                                              "Customer support hub"
+                                                                                                          ],
+                                                                                             "evidence":  [
+                                                                                                              "Find care near you â link to care locations page",
+                                                                                                              "Pay a medical bill â link to billâpay page",
+                                                                                                              "Manage an HSA or FSA â link to financial services page",
+                                                                                                              "Fill a prescription â link to OptumRx",
+                                                                                                              "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                              "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                              "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                              "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                              "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                          ],
+                                                                                             "confidence":  0.94
+                                                                                         },
+                                                                    "keywords":  [
+                                                                                     "online pharmacy home delivery",
+                                                                                     "HSA and FSA prepaid card benefits",
+                                                                                     "find healthcare providers near me",
+                                                                                     "medical bill payment platform",
+                                                                                     "patient portal health records access",
+                                                                                     "24/7 licensed pharmacist support",
+                                                                                     "health and wellness articles library",
+                                                                                     "healthcare cost savings with HSA/FSA"
+                                                                                 ],
+                                                                    "competitors":  [
+                                                                                        "CVS Health",
+                                                                                        "Cigna",
+                                                                                        "Walgreens Boots Alliance"
+                                                                                    ],
+                                                                    "services":  [
+                                                                                     "Medical bill payment platform",
+                                                                                     "Home delivery pharmacy (OptumRx)",
+                                                                                     "HSA/FSA management and prepaid cards"
+                                                                                 ],
+                                                                    "opportunity_qualified":  false,
+                                                                    "qualification_reason":  null,
+                                                                    "fit_score":  0,
+                                                                    "contact_info":  {
+                                                                                         "email":  "pharmacy@wegmans.com",
+                                                                                         "name":  "Www Team",
+                                                                                         "source":  "llm_extraction",
+                                                                                         "verification_status":  "unverified_llm_extracted",
+                                                                                         "contact_type":  "general",
+                                                                                         "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                         "confidence":  0.5
+                                                                                     },
+                                                                    "analytics":  {
+                                                                                      "pipeline_confidence":  1.0,
+                                                                                      "bi_confidence":  0.94,
+                                                                                      "keyword_confidence":  0.905
+                                                                                  },
+                                                                    "status":  "services_extracted"
+                                                                },
+                                                  "raw_output":  {
+                                                                     "opportunity_qualified":  true,
+                                                                     "qualification_reason":  "{\"qualified\": true, \"fit_score\": 5, \"score_breakdown\": {\"industry_relevance\": 0.12, \"domain_authority\": 50, \"organic_traffic\": 85650, \"spam_score\": 50, \"content_freshness\": 1.0, \"keyword_overlap\": 0.22, \"editorial_relevance\": 0.0, \"contact_quality\": 1.0, \"llm_suggested_score\": 8, \"computed_raw\": 0.4, \"final_score\": 5}, \"reasons\": [{\"category\": \"Audience overlap\", \"description\": \"Optum\u0027s target audience includes individual consumers/patients, families, employers, and employee benefit plans, align... [truncated 1167 chars]",
+                                                                     "fit_score":  5,
+                                                                     "score_breakdown":  {
+                                                                                             "industry_relevance":  0.12,
+                                                                                             "domain_authority":  50,
+                                                                                             "organic_traffic":  85650,
+                                                                                             "spam_score":  50,
+                                                                                             "content_freshness":  1.0,
+                                                                                             "keyword_overlap":  0.22,
+                                                                                             "editorial_relevance":  0.0,
+                                                                                             "contact_quality":  1.0,
+                                                                                             "llm_suggested_score":  8,
+                                                                                             "computed_raw":  0.4,
+                                                                                             "final_score":  5
+                                                                                         },
+                                                                     "analytics":  {
+                                                                                       "qualification_confidence":  1.0
+                                                                                   },
+                                                                     "status":  "opportunity_qualified",
+                                                                     "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                     "contact_info":  {
+                                                                                          "email":  "pharmacy@wegmans.com",
+                                                                                          "name":  "Www Team",
+                                                                                          "source":  "llm_extraction",
+                                                                                          "verification_status":  "unverified_llm_extracted",
+                                                                                          "contact_type":  "general",
+                                                                                          "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                          "confidence":  0.5
+                                                                                      }
+                                                                 },
+                                                  "retry_count":  0,
+                                                  "score_breakdown":  {
+                                                                          "industry_relevance":  0.12,
+                                                                          "domain_authority":  50,
+                                                                          "organic_traffic":  85650,
+                                                                          "spam_score":  50,
+                                                                          "content_freshness":  1.0,
+                                                                          "keyword_overlap":  0.22,
+                                                                          "editorial_relevance":  0.0,
+                                                                          "contact_quality":  1.0,
+                                                                          "llm_suggested_score":  8,
+                                                                          "computed_raw":  0.4,
+                                                                          "final_score":  5
+                                                                      },
+                                                  "status":  "opportunity_qualified",
+                                                  "structured_json":  {
+                                                                          "opportunity_qualified":  true,
+                                                                          "qualification_reason":  "{\"qualified\": true, \"fit_score\": 5, \"score_breakdown\": {\"industry_relevance\": 0.12, \"domain_authority\": 50, \"organic_traffic\": 85650, \"spam_score\": 50, \"content_freshness\": 1.0, \"keyword_overlap\": 0.22, \"editorial_relevance\": 0.0, \"contact_quality\": 1.0, \"llm_suggested_score\": 8, \"computed_raw\": 0.4, \"final_score\": 5}, \"reasons\": [{\"category\": \"Audience overlap\", \"description\": \"Optum\u0027s target audience includes individual consumers/patients, families, employers, and employee benefit plans, align... [truncated 1167 chars]",
+                                                                          "fit_score":  5,
+                                                                          "score_breakdown":  {
+                                                                                                  "industry_relevance":  0.12,
+                                                                                                  "domain_authority":  50,
+                                                                                                  "organic_traffic":  85650,
+                                                                                                  "spam_score":  50,
+                                                                                                  "content_freshness":  1.0,
+                                                                                                  "keyword_overlap":  0.22,
+                                                                                                  "editorial_relevance":  0.0,
+                                                                                                  "contact_quality":  1.0,
+                                                                                                  "llm_suggested_score":  8,
+                                                                                                  "computed_raw":  0.4,
+                                                                                                  "final_score":  5
+                                                                                              },
+                                                                          "analytics":  {
+                                                                                            "qualification_confidence":  1.0
+                                                                                        },
+                                                                          "status":  "opportunity_qualified",
+                                                                          "target_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                          "contact_info":  {
+                                                                                               "email":  "pharmacy@wegmans.com",
+                                                                                               "name":  "Www Team",
+                                                                                               "source":  "llm_extraction",
+                                                                                               "verification_status":  "unverified_llm_extracted",
+                                                                                               "contact_type":  "general",
+                                                                                               "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                                                                                               "confidence":  0.5
+                                                                                           }
+                                                                      },
+                                                  "task":  "Qualify target",
+                                                  "timestamp":  "2026-07-03T02:07:35.337000",
+                                                  "updated_at":  "2026-07-03T02:07:35.344000"
+                                              },
+                      "strategy_planner":  {
+                                               "node":  "strategy_planner",
+                                               "campaign_id":  "camp-1783044431915",
+                                               "agent":  "StrategyPlanner",
+                                               "api_source":  "cerebras",
+                                               "cache_state":  "live",
+                                               "confidence":  0.5,
+                                               "duration":  0.6700000000018917,
+                                               "error":  null,
+                                               "is_simulated":  false,
+                                               "model":  "gpt-oss-120b",
+                                               "provider":  "cerebras",
+                                               "provider_purpose":  "llm-strategy",
+                                               "raw_input":  {
+                                                                 "campaign_id":  "camp-1783044431915",
+                                                                 "our_url":  "https://www.optum.com/en/",
+                                                                 "target_url":  "",
+                                                                 "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial se... [truncated 690 chars]",
+                                                                 "business_profile":  {
+                                                                                          "company_name":  "Optum",
+                                                                                          "industry":  "Healthcare / Health Services / Health Technology",
+                                                                                          "audience":  [
+                                                                                                           "Individual consumers/patients",
+                                                                                                           "Families",
+                                                                                                           "Employers and employee benefit plans",
+                                                                                                           "Healthcare providers seeking technology solutions"
+                                                                                                       ],
+                                                                                          "value_props":  [
+                                                                                                              "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                                                                              "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                                                                              "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                                                                              "Easy location of nearby care facilities and providers",
+                                                                                                              "Educational health and wellness content to empower healthier living"
+                                                                                                          ],
+                                                                                          "products":  [
+                                                                                                           "Find care near you (location finder)",
+                                                                                                           "Medical bill payment platform",
+                                                                                                           "HSA/FSA management and prepaid cards",
+                                                                                                           "OptumRx online pharmacy and Home Delivery service",
+                                                                                                           "Patient portal (payments, test results, appointments, messaging)",
+                                                                                                           "Healthâarticles library (wellness, finance, preventive care)",
+                                                                                                           "Career portal for Optum jobs",
+                                                                                                           "Customer support hub"
+                                                                                                       ],
+                                                                                          "evidence":  [
+                                                                                                           "Find care near you â link to care locations page",
+                                                                                                           "Pay a medical bill â link to billâpay page",
+                                                                                                           "Manage an HSA or FSA â link to financial services page",
+                                                                                                           "Fill a prescription â link to OptumRx",
+                                                                                                           "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                                                                                           "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                                                                                           "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                                                                                           "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                                                                                           "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                                                                                       ],
+                                                                                          "confidence":  0.94
+                                                                                      },
+                                                                 "keywords":  [
+
+                                                                              ],
+                                                                 "competitors":  [
+
+                                                                                 ],
+                                                                 "services":  [
+
+                                                                              ],
+                                                                 "opportunity_qualified":  false,
+                                                                 "qualification_reason":  null,
+                                                                 "fit_score":  0,
+                                                                 "contact_info":  {
+
+                                                                                  },
+                                                                 "analytics":  {
+                                                                                   "pipeline_confidence":  0.35,
+                                                                                   "bi_confidence":  0.94
+                                                                               },
+                                                                 "status":  "bi_generated"
+                                                             },
+                                               "raw_output":  {
+                                                                  "strategy":  "resource_page",
+                                                                  "status":  "strategy_planned"
+                                                              },
+                                               "retry_count":  0,
+                                               "score_breakdown":  null,
+                                               "status":  "strategy_planned",
+                                               "structured_json":  {
+                                                                       "strategy":  "resource_page",
+                                                                       "status":  "strategy_planned"
+                                                                   },
+                                               "task":  "Plan strategy",
+                                               "timestamp":  "2026-07-03T02:07:18.100000",
+                                               "updated_at":  "2026-07-03T02:07:18.102000"
+                                           }
+                  },
+    "our_content":  "[Skip to Data Use Notice](https://www.optum.com/en/#o5-legal-banner-container) [Skip to main content](https://www.optum.com/en/#main-content)\n\n![Optum nurse smiling ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/health-care-you-can-count-on.jpg)![Optum nurse smiling ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/health-care-you-can-count-on-mobile.jpg)\n\n# Health care you can count on\n\n- [![](https://www.optum.com/content/dam/optum4/iconography-resources/medical/Icon_Stethoscope_RGB.svg)\\\\\nFind care near you](https://www.optum.com/en/care/locations.html)\n- [![](https://www.optum.com/content/dam/optum4/iconography-resources/finance/Icon_DigitalWallet_RGB.svg)\\\\\nPay a medical bill](https://www.optum.com/en/care/bill-pay.html)\n- [![](https://www.optum.com/content/dam/optum4/iconography-resources/finance/Icon_PiggyBank_RGB.svg)\\\\\nManage an HSA or FSA](https://www.optum.com/en/financial-services.html)\n- [![](https://www.optum.com/content/dam/optum4/iconography-resources/medical/Icon_PillBottle_RGB.svg)\\\\\nFill a prescription](https://www.optumrx.com/)\n\n![Woman making Rx payment on laptop ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/woman-making-rx-payment-on-laptop.jpg)\n\nHealth care information\n\n## Visit your patient portal\n\nMake payments, submit copays, see your billing statements, view test results, schedule appointments and message your care team.\n\n[Find your portal by state](https://www.optum.com/en/care/patient-portals.html)\n\nHealth finances\n\n## Make your health care dollars go further\n\nYouâll be surprised at all the everyday health items you can buy with your HSA and FSA card â saving up to 30% with pretax dollars.\n\n[See where you can shop and save](https://www.optum.com/en/financial-services/learn/hsa-fsa-payment-card.html)\n\n![Woman checking out at pharmacy ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/woman-checking-out-at-pharmacy.jpg)\n\n![Dad and daughter at home](https://www.optum.com/content/dam/optum-dam/images/corporate/home/father-watching-daughter-jump-on-couch.jpg)\n\nOnline pharmacy\n\n## Youâve got better things to do than stand in line at the pharmacy\n\nOptum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to our licensed pharmacists â ready to answer any question.\n\n[Learn about Home Delivery](https://www.optum.com/en/pharmacy-services/medication-delivery.html)\n\nHealth and wellness\n\n\n## A healthier you happens here\n\nFind tips, ideas and information to inspire healthy living at any age, including topics important to you and your family.\n\n![](https://hc-visit.optum.com/content/dam/content-ecosystem/healthier-you/raw-images/mod-hlthu-335_HSA_max-contribution_1200x800.jpg)\n\nHealth care finances\n\n\n### HSA max contribution, explained\n\nEvery year, the Internal Revenue Service (IRS) sets a contribution limit for everyone with a health savings account (HSA). It\u0027s the maximum amount of money you can put into the account for that calendar year.\n\n[Read more](https://www.optum.com/en/health-articles.html/health-care-finances/hsa-max-contribution-explained)\n\n![](https://hc-visit.optum.com/content/dam/content-ecosystem/healthier-you/raw-images/health-conditions/getahandleonyourchronicskinproblems-web-1200x800-72_5.jpg)\n\nHealthy living\n\n\n### How to handle your summer skin problems\n\nWarm weather can pose unique risks for people who have skin conditions. Hereâs how to help protect your skin and still have fun in the sun.\n\n[Read more](https://www.optum.com/en/health-articles.html/healthy-living/how-get-handle-your-summer-skin-problems)\n\n![](https://hc-visit.optum.com/content/dam/content-ecosystem/healthier-you/raw-images/your-care-team-your-care/whattypewellnessvisitrightforme-web-1200x800-72_13.jpg)\n\nHealthy living\n\n\n### Your age-by-age guide to annual physical exams\n\nYou should see your doctor often, no matter how old you are. But what happens during those visits changes as you get older. Hereâs what to know.\n\n[Read more](https://www.optum.com/en/health-articles.html/healthy-living/your-age-guide-annual-checkups)\n\n[Read more wellness articles](https://www.optum.com/content/optum5/en/health-articles.html)\n\nAbout us\n\n## HealthyOptumism\n\nWeâreÂ helpingÂ solveÂ the challenges in healthcareÂ with a bold and optimistic outlook.\n\n[Get to know us](https://www.optum.com/en/about-us.html)\n\n![In-home nurse with infusion patient ](https://www.optum.com/content/dam/optum-dam/images/corporate/home/in-home-nurse-with-infusion-patient.jpg)\n\nJoin us\n\n\n## Explore Optum jobs\n\nCheck out current career opportunities to discover how you can start caring, connecting and growing â together with Optum.\n\n[Search careers](https://www.optum.com/en/careers.html)\n\nSupport\n\n\n## Youâve got questions, Optum has answers\n\nWhether itâs about health care, financial or pharmacy-related services, weâll help you find the answer you need.\n\n[View customer service](https://www.optum.com/en/customer-support.html)\n\n[back to top](https://www.optum.com/en/#main-content)\n\nback to top\n\n**Data use**\n\nWe use cookies and similar tools to make your use of this website easy and to keep it working properly. We may share data about you and how you use the site with third parties, such as analytics and marketing partners. Learn more in our [**Privacy Policy**](https://www.optum.com/en/privacy-policy.html) and [**Terms of Use**](https://www.optum.com/en/terms-of-use.html). By continuing to use the site, you agree to this.\n\n\nUnified Search Analytics",
+    "bi_insights":  "{\"company_name\": \"Optum\", \"industry\": \"Healthcare / Health Services / Health Technology\", \"audience\": [\"Individual consumers/patients\", \"Families\", \"Employers and employee benefit plans\", \"Healthcare providers seeking technology solutions\"], \"value_props\": [\"Comprehensive, integrated health services that combine care, finance, and pharmacy\", \"Convenient digital tools (patient portal, bill\\u2011pay, HSA/FSA cards) for managing health expenses\", \"24/7 access to licensed pharmacists through home\\u2011delivery pharmacy\", \"Easy location of nearby care facilities and providers\", \"Educational health and wellness content to empower healthier living\"], \"products\": [\"Find care near you (location finder)\", \"Medical bill payment platform\", \"HSA/FSA management and prepaid cards\", \"OptumRx online pharmacy and Home Delivery service\", \"Patient portal (payments, test results, appointments, messaging)\", \"Health\\u2011articles library (wellness, finance, preventive care)\", \"Career portal for Optum jobs\", \"Customer support hub\"], \"evidence\": [\"Find care near you \\u2013 link to care locations page\", \"Pay a medical bill \\u2013 link to bill\\u2011pay page\", \"Manage an HSA or FSA \\u2013 link to financial services page\", \"Fill a prescription \\u2013 link to OptumRx\", \"Visit your patient portal \\u2013 description of payments, copays, billing statements, test results, appointments, messaging\", \"Make your health care dollars go further \\u2013 description of pretax savings up to 30% with HSA/FSA cards\", \"Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists\", \"Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and age\\u2011by\\u2011age physical exam guides\", \"Support section offering answers for health care, financial, or pharmacy\\u2011related questions\"], \"confidence\": 0.94}",
+    "business_profile":  {
+                             "company_name":  "Optum",
+                             "industry":  "Healthcare / Health Services / Health Technology",
+                             "audience":  [
+                                              "Individual consumers/patients",
+                                              "Families",
+                                              "Employers and employee benefit plans",
+                                              "Healthcare providers seeking technology solutions"
+                                          ],
+                             "value_props":  [
+                                                 "Comprehensive, integrated health services that combine care, finance, and pharmacy",
+                                                 "Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses",
+                                                 "24/7 access to licensed pharmacists through homeâdelivery pharmacy",
+                                                 "Easy location of nearby care facilities and providers",
+                                                 "Educational health and wellness content to empower healthier living"
+                                             ],
+                             "products":  [
+                                              "Find care near you (location finder)",
+                                              "Medical bill payment platform",
+                                              "HSA/FSA management and prepaid cards",
+                                              "OptumRx online pharmacy and Home Delivery service",
+                                              "Patient portal (payments, test results, appointments, messaging)",
+                                              "Healthâarticles library (wellness, finance, preventive care)",
+                                              "Career portal for Optum jobs",
+                                              "Customer support hub"
+                                          ],
+                             "evidence":  [
+                                              "Find care near you â link to care locations page",
+                                              "Pay a medical bill â link to billâpay page",
+                                              "Manage an HSA or FSA â link to financial services page",
+                                              "Fill a prescription â link to OptumRx",
+                                              "Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging",
+                                              "Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards",
+                                              "Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists",
+                                              "Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides",
+                                              "Support section offering answers for health care, financial, or pharmacyârelated questions"
+                                          ],
+                             "confidence":  0.94
+                         },
+    "our_analysis":  "{\n  \"company_name\": \"Optum\",\n  \"industry\": \"Healthcare / Health Services / Health Technology\",\n  \"audience\": [\n    \"Individual consumers/patients\",\n    \"Families\",\n    \"Employers and employee benefit plans\",\n    \"Healthcare providers seeking technology solutions\"\n  ],\n  \"value_props\": [\n    \"Comprehensive, integrated health services that combine care, finance, and pharmacy\",\n    \"Convenient digital tools (patient portal, billâpay, HSA/FSA cards) for managing health expenses\",\n    \"24/7 access to licensed pharmacists through homeâdelivery pharmacy\",\n    \"Easy location of nearby care facilities and providers\",\n    \"Educational health and wellness content to empower healthier living\"\n  ],\n  \"products\": [\n    \"Find care near you (location finder)\",\n    \"Medical bill payment platform\",\n    \"HSA/FSA management and prepaid cards\",\n    \"OptumRx online pharmacy and Home Delivery service\",\n    \"Patient portal (payments, test results, appointments, messaging)\",\n    \"Healthâarticles library (wellness, finance, preventive care)\",\n    \"Career portal for Optum jobs\",\n    \"Customer support hub\"\n  ],\n  \"evidence\": [\n    \"Find care near you â link to care locations page\",\n    \"Pay a medical bill â link to billâpay page\",\n    \"Manage an HSA or FSA â link to financial services page\",\n    \"Fill a prescription â link to OptumRx\",\n    \"Visit your patient portal â description of payments, copays, billing statements, test results, appointments, messaging\",\n    \"Make your health care dollars go further â description of pretax savings up to 30% with HSA/FSA cards\",\n    \"Optum Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists\",\n    \"Health and wellness articles covering topics like HSA contribution limits, summer skin problems, and ageâbyâage physical exam guides\",\n    \"Support section offering answers for health care, financial, or pharmacyârelated questions\"\n  ],\n  \"confidence\": 0.94\n}",
+    "strategy":  "resource_page",
+    "keywords":  [
+                     "online pharmacy home delivery",
+                     "HSA and FSA prepaid card benefits",
+                     "find healthcare providers near me",
+                     "medical bill payment platform",
+                     "patient portal health records access",
+                     "24/7 licensed pharmacist support",
+                     "health and wellness articles library",
+                     "healthcare cost savings with HSA/FSA"
+                 ],
+    "competitors":  [
+                        "CVS Health",
+                        "Cigna",
+                        "Walgreens Boots Alliance"
+                    ],
+    "target_content":  "Skip To ContentSkip To Search\n\nOnline Pharmacy and Home Delivery\n\n# Online Pharmacy \u0026 HomeÂ Delivery\n\n## Save Time with Home Delivery\n\n**_$0 Delivery fee until 12/31/2026.\\*_**\n\nThe ultimate in convenience! Save time with a prescription delivery directly to your mailbox, anywhere in the United States. Whether youâre a snowbird for the winter or simply prefer the convenience, prescription delivery is just one more way we can deliver the incredible service you expect.\n\n- Standard Delivery for $1 per shipment (exclusions may apply), 5-7 business days\n- Home Delivery is self-serve and can be changed by clicking the link in your Review Order text message\n\n_\\*Other fees may apply. Terms apply._\n\n![Wegmans veggies](https://images.wegmans.com/is/image/wegmanscsprod/6997458-1200x755-Mailbox-1?fmt=webp-alpha)![Wegmans veggies](https://images.wegmans.com/is/image/wegmanscsprod/6997458-1200x755-Mailbox-1?fmt=webp-alpha)\n\n## How to Choose Home Delivery for Prescriptions\n\n- ![Step 1: Click the link](https://images.wegmans.com/is/image/wegmanscsprod/6847893-Phones-SignUp-1-r2-1?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nStep 1: Click the link\n\n\n\n\n\n\n\n\n\nClick the link in your refill reminder or autofill message orÂ **text HOME to 67056**.\n\n- ![Step 2: Choose your prescription refills](https://images.wegmans.com/is/image/wegmanscsprod/6847893-Phones-SignUp-2-r2?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nStep 2: Choose your prescription refills\n\n\n\n\n\n\n\n\n\nSelectÂ **Home Delivery**Â orÂ **Pickup in Store**Â for each of your prescriptions. Your selection will turn green and a checkmark will appear beside it. Items that cannot be delivered will sayÂ **Not Eligible for Home Delivery.\\***\n\n- ![Step 3: Save your selections](https://images.wegmans.com/is/image/wegmanscsprod/6847893-Phones-SignUp-3-r2?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nStep 3: Save your selections\n\n\n\n\n\n\n\n\n\nClickÂ **SAVE AND CONTINUE**Â once you have selected a delivery preference for each prescription. Your delivery preferences have been saved for future orders (you have the option to change these at any time).\n\n- ![Step 4: Review and submit](https://images.wegmans.com/is/image/wegmanscsprod/6847893-Phones-SignUp-4-r2-1?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nStep 4: Review and submit\n\n\n\n\n\n\n\n\n\nReview your order summary to verify that everything looks correct, thenÂ **click SUBMIT ORDER.**Â Done!\n\n\n_\\*Home Delivery exclusions may include controlled substances, refrigerated products, bulky items, etc._\n\n* * *\n\n## Helpful Text Alerts\n\nWant to know when your prescriptions are ready? Need to change your order? Our FREE Text Alerts keep you in the loop and in control for maximum efficiencyâno wasted trips or surprises! Sign up on yourÂ [Wegmans Pharmacy Online Account](https://wegmans.web.medrefill.com/wgweb/#/account)Â or stop by your storeâs pharmacy to ask our team for assistance.\n\n- ![Prescription Received](https://images.wegmans.com/is/image/wegmanscsprod/6847893-1200x1200-TextAlerts-PrescriptionReceived-1?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nPrescription Received\n\n\n\n\n\n\n\n\n\nNo more guessing if your doctor sent your script! Weâll text you when we receive a new electronic prescription from your provider and include a link to track its progress.\n\n- ![Refill Reminders](https://images.wegmans.com/is/image/wegmanscsprod/6847893-1200x1200-TextAlerts-RefillReminders?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nRefill Reminders\n\n\n\n\n\n\n\n\n\nWeâll notify you when weâre planning for upcoming refills.\n\n- ![Order Updates](https://images.wegmans.com/is/image/wegmanscsprod/6847893-1200x1200-TextAlerts-OrderUpdates-r1-1?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nOrder Updates\n\n\n\n\n\n\n\n\n\nWeâll inform you when your order is ready or delayed and provide delivery/pickup details and cost.\n\n- ![Modify Your Order](https://images.wegmans.com/is/image/wegmanscsprod/6847893-1200x1200-TextAlerts-ModifyYourOrder-1?wid=400\u0026hei=400\u0026fit=crop\u0026fmt=webp-alpha)\n\n\n\nModify Your Order\n\n\n\n\n\n\n\n\n\nEasily add or remove items in your order, reschedule the reminder, and choose home delivery or pickup.\n\n\n_Certain phone charges may apply. This free service can be started and ended at any time._\n\n* * *\n\n## Manage Your Prescriptions Online\n\nWe help our customers live healthier, better lives by making it easy to get prescription meds and more. Did you know that you can manage your prescriptions and preferences online? From convenient home delivery to text message reminders, you can manage your medications your way.\n\n![Manage Your Prescriptions Online](https://images.wegmans.com/is/image/wegmanscsprod/1180x742-pharmacy-online-1?fmt=webp-alpha)![Manage Your Prescriptions Online](https://images.wegmans.com/is/image/wegmanscsprod/1180x742-pharmacy-online-1?fmt=webp-alpha)\n\n#### We make it easy to:\n\n- Fill prescriptions\n- [Schedule immunization appointments](https://chat.eh.care/4f5bf782d0104a79856ab6c2b2e03037)Â (or walk in anytime!)\n- Manage prescriptions for family members and others (dependents, partners, elders, pets)\n- Adjust notification preferences and how you receive your prescriptions\n- Print your prescription purchase summary\n\n[Get Started(opens in a new window)](https://wegmans.web.medrefill.com/wgweb/#/prescription)\n\n**Please Note:** First-time Pharmacy Online account users will need to have their identity validated. The personal identity verification check is administered by our trusted business partner ExperianÂ®. Itâs a one-time process that involves answering specific questions, ensuring the person attempting to access your pharmacy information truly is you.\n\n* * *\n\n![Never Run Out of Refills](https://images.wegmans.com/is/image/wegmanscsprod/auto-refill-1?fmt=webp-alpha)![Never Run Out of Refills](https://images.wegmans.com/is/image/wegmanscsprod/auto-refill-1?fmt=webp-alpha)\n\n## Never Run Out of Refills\n\nWhen youâre on your last fill, weâll request a new prescription from your doctor, so you never run out of refills.\n\n#### Easy Ways to Fill Your Prescriptions\n\n- Refill Reminders help you plan ahead so you never run out\n- Autofill: If youâre enrolled in Text Alerts, weâll send a reminder before you run out. The link in the message lets you make any necessary changes; otherwise, weâll text you when your order has shipped or is ready.\n- [Refill with Rx number online](https://wegmans.web.medrefill.com/wgweb/#/refill)\n- Refill with Rx number by calling the pharmacy\n- Text your Rx number to 67056\n\n* * *\n\n#### Set Up Your Mail Order Benefit\n\nIf you are a member of Excellus, Univera, CDPHPâ¯or Independent Health Association (IHA) and you have a mail order benefit as part of your health plan, please call us at the following numbers for help getting set up. If you are unsure if you have a mail order benefit, please contact your health plan.\n\nExcellus/Univera: 800-586-6910â¯\\| CDPHP: 1-844-328-2550â¯\\| IHA: 888-205-8573\n\nNo delivery fee for standard shipping.\n\nQuestions?Â [View our Pharmacy Online FAQs](https://www.wegmans.com/service/faq/pharmacy)\n\nOur website uses cookies and other technologies to help it function and give you the best Wegmans experience. For more information, see our [Privacy Policy](https://www.wegmans.com/privacy). By accessing or using our website, you agree to our updated [Terms \u0026 Conditions](https://www.wegmans.com/terms).\n\nClose",
+    "contact_info":  {
+                         "email":  "pharmacy@wegmans.com",
+                         "name":  "Www Team",
+                         "source":  "llm_extraction",
+                         "verification_status":  "unverified_llm_extracted",
+                         "contact_type":  "general",
+                         "page_url":  "https://www.wegmans.com/pharmacy/online-pharmacy-and-home-delivery",
+                         "confidence":  0.5
+                     },
+    "services":  [
+                     "Medical bill payment platform",
+                     "Home delivery pharmacy (OptumRx)",
+                     "HSA/FSA management and prepaid cards"
+                 ],
+    "fit_score":  5,
+    "opportunity_qualified":  true,
+    "qualification_reason":  "{\"qualified\": true, \"fit_score\": 5, \"score_breakdown\": {\"industry_relevance\": 0.12, \"domain_authority\": 50, \"organic_traffic\": 85650, \"spam_score\": 50, \"content_freshness\": 1.0, \"keyword_overlap\": 0.22, \"editorial_relevance\": 0.0, \"contact_quality\": 1.0, \"llm_suggested_score\": 8, \"computed_raw\": 0.4, \"final_score\": 5}, \"reasons\": [{\"category\": \"Audience overlap\", \"description\": \"Optum\u0027s target audience includes individual consumers/patients, families, employers, and employee benefit plans, aligning with the potential audience for Wegmans\u0027 Home Delivery service.\"}, {\"category\": \"Value proposition alignment\", \"description\": \"Optum\u0027s value proposition of comprehensive, integrated health services aligns with Wegmans\u0027 Home Delivery service, which offers convenient digital tools and 24/7 access to licensed pharmacists.\"}, {\"category\": \"Product and service alignment\", \"description\": \"Optum offers a range of products and services, including OptumRx online pharmacy and Home Delivery service, which aligns with Wegmans\u0027 Home Delivery service.\"}], \"risks\": [{\"category\": \"Competition\", \"description\": \"There may be existing competitors in the online pharmacy and home delivery space that could potentially compete with Wegmans for market share.\"}, {\"category\": \"Regulatory compliance\", \"description\": \"Wegmans must ensure compliance with all applicable laws and regulations related to online pharmacy and home delivery services.\"}], \"suggested_angle\": \"Position Wegmans\u0027 Home Delivery service as a convenient and comprehensive solution for Optum\u0027s customers, highlighting the alignment with Optum\u0027s value proposition and product offerings.\", \"llm_assessment\": \"\"}",
+    "score_breakdown":  {
+                            "industry_relevance":  0.12,
+                            "domain_authority":  50,
+                            "organic_traffic":  85650,
+                            "spam_score":  50,
+                            "content_freshness":  1.0,
+                            "keyword_overlap":  0.22,
+                            "editorial_relevance":  0.0,
+                            "contact_quality":  1.0,
+                            "llm_suggested_score":  8,
+                            "computed_raw":  0.4,
+                            "final_score":  5
+                        },
+    "outreach_email":  {
+                           "subject":  "Make Your Health Care Dollars Go Further with Optum Home Delivery Pharmacy",
+                           "body":  "At Optum, we\u0027re committed to delivering comprehensive, integrated health services that combine care, finance, and pharmacy. Our Home Delivery Pharmacy brings your medications directly to your door and gives you 24/7 access to licensed pharmacists. With $0 delivery fee until 12/31/2026, you can save time and money. Learn how to choose Home Delivery for your prescriptions on our website.",
+                           "personalization_angle":  "Article and content from target site",
+                           "call_to_action":  "Learn how to choose Home Delivery for your prescriptions",
+                           "confidence":  0.94,
+                           "to_email":  "pharmacy@wegmans.com",
+                           "to_name":  "Www Team",
+                           "approval_status":  "pending_review"
+                       },
+    "completed_at":  "2026-07-03T02:07:36.174000"
+}
