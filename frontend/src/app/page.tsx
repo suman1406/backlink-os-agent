@@ -638,7 +638,7 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                   icon={BrainCircuit} 
                   label="Strategy" 
                   value={String(campaign?.analytics?.strategy || (campaign as any)?.strategy || "guest_post").replace(/_/g, " ")} 
-                  tooltip={campaign?.search_queries?.length > 0 ? `Query: ${campaign.search_queries[0]}` : "AI selected backlink strategy."}
+                  tooltip={(campaign as any)?.search_queries?.length > 0 ? `Query: ${(campaign as any).search_queries[0]}` : "AI selected backlink strategy."}
                 />
                 <Metric icon={LinkIcon} label="Live Links [MOCK]" value={analyticsData?.live_backlinks > 0 ? analyticsData.live_backlinks : 14} color="text-emerald-400" tooltip="Actual backlink placement requires CMS credentials or authorization for third-party sites which we don't have, so this metric is simulated." />
                 <Metric icon={Mail} label="Open Rate [MOCK]" value="45%" color="text-emerald-400" tooltip="Requires SendGrid/SMTP webhooks which are not currently provisioned." />
@@ -719,7 +719,7 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                           value={campaign?.contact_info?.email ? `${campaign.contact_info.email} (${campaign.contact_info.verification_status})` : undefined} 
                           icon={Mail} 
                           delay={0.5} 
-                          highlight={campaign?.contact_info?.verification_status?.includes("verified")}
+                          highlight={String((campaign as any)?.contact_info?.verification_status || "").includes("verified")}
                         />
                         <GraphNode 
                           label="LinkedIn" 
@@ -760,26 +760,26 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                           <div className="text-xs text-zinc-500 uppercase tracking-wider mt-1">{campaign.status.replace(/_/g, " ")}</div>
                         </div>
                         <div className="text-right">
-                          <div className="text-xs font-mono text-zinc-500">Raw: {campaign.score_breakdown.computed_raw}</div>
+                           <div className="text-xs font-mono text-zinc-500">Raw: {String((campaign.score_breakdown as any).computed_raw)}</div>
                         </div>
                      </div>
                      
                      <div className="space-y-2 mt-4">
-                        <ProgressBar label="Industry (25%)" val={campaign.score_breakdown.industry_relevance} />
-                        <ProgressBar label="Authority (25%)" val={campaign.score_breakdown.domain_authority} />
-                        <ProgressBar label="Content (15%)" val={campaign.score_breakdown.content_freshness} />
-                        <ProgressBar label="Keywords (20%)" val={campaign.score_breakdown.keyword_overlap} />
-                        <ProgressBar label="Editorial (10%)" val={campaign.score_breakdown.editorial_relevance} />
+                         <ProgressBar label="Industry (25%)" val={Number((campaign.score_breakdown as any).industry_relevance)} />
+                         <ProgressBar label="Authority (25%)" val={Number((campaign.score_breakdown as any).domain_authority)} />
+                         <ProgressBar label="Content (15%)" val={Number((campaign.score_breakdown as any).content_freshness)} />
+                        <ProgressBar label="Keywords (20%)" val={(campaign.score_breakdown as any).keyword_overlap} />
+                        <ProgressBar label="Editorial (10%)" val={(campaign.score_breakdown as any).editorial_relevance} />
                      </div>
 
-                     {campaign.qualification_reason && (
+                     {(campaign as any).qualification_reason && (
                        <div className="mt-4 space-y-2 text-xs">
                          <div>
                            <span className="font-semibold text-zinc-300">Target Audience:</span>
                            <ul className="list-disc pl-5 mt-1 opacity-90">
                              {(() => {
                                try {
-                                 const parsed = typeof campaign.bi_insights === 'string' ? JSON.parse(campaign.bi_insights) : (campaign.bi_insights || {});
+                                 const parsed = typeof (campaign as any).bi_insights === 'string' ? JSON.parse((campaign as any).bi_insights) : ((campaign as any).bi_insights || {});
                                  return Array.isArray(parsed?.audience) ? parsed.audience.map((a: any, i: number) => (
                                    <li key={i}>{typeof a === 'string' ? a : (a.category ? `${a.category}: ${a.description || ''}` : JSON.stringify(a))}</li>
                                  )) : null;
@@ -792,7 +792,7 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                            <ul className="list-disc pl-5 mt-1 opacity-90">
                              {(() => {
                                try {
-                                 const parsed = typeof campaign.bi_insights === 'string' ? JSON.parse(campaign.bi_insights) : (campaign.bi_insights || {});
+                                 const parsed = typeof (campaign as any).bi_insights === 'string' ? JSON.parse((campaign as any).bi_insights) : ((campaign as any).bi_insights || {});
                                  return Array.isArray(parsed?.services) ? parsed.services.map((s: any, i: number) => (
                                    <li key={i}>{typeof s === 'string' ? s : JSON.stringify(s)}</li>
                                  )) : null;
@@ -802,7 +802,7 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                          </div>
                          {(() => {
                            try {
-                             const parsed = typeof campaign.qualification_reason === 'string' ? JSON.parse(campaign.qualification_reason) : (campaign.qualification_reason || {});
+                             const parsed = typeof (campaign as any).qualification_reason === 'string' ? JSON.parse((campaign as any).qualification_reason) : ((campaign as any).qualification_reason || {});
                              return Array.isArray(parsed?.reasons) ? parsed.reasons.map((r: any, i: number) => (
                                <div key={i} className="flex items-start gap-2 text-emerald-200 bg-emerald-950/20 p-2 border border-emerald-900/30 mt-2">
                                  <Check className="h-3.5 w-3.5 shrink-0 mt-0.5" />
@@ -821,12 +821,12 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
 
               {/* Outreach Management */}
               <InsightCard title="Outreach Management" icon={Send}>
-                {campaign?.outreach_email ? (
+                {(campaign as any)?.outreach_email ? (
                   <div className="space-y-3 relative">
                     {/* Status badge */}
-                    {campaign.outreach_status && (
-                      <div className={`absolute -top-10 right-0 text-[10px] uppercase font-bold px-2 py-1 ${campaign.outreach_status === 'sent' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}`}>
-                        {campaign.outreach_status}
+                    {(campaign as any).outreach_status && (
+                      <div className={`absolute -top-10 right-0 text-[10px] uppercase font-bold px-2 py-1 ${(campaign as any).outreach_status === 'sent' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}`}>
+                        {(campaign as any).outreach_status}
                       </div>
                     )}
                     
@@ -857,7 +857,7 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                         </>
                       ) : (
                         <>
-                          {campaign.outreach_status !== 'sent' && (
+                          {(campaign as any)?.outreach_status !== 'sent' && (
                             <button onClick={handleSendOutreach} disabled={isSending} className="flex-1 bg-emerald-950 text-emerald-400 border border-emerald-800 text-sm font-bold py-2 px-3 flex justify-center items-center gap-2 hover:bg-emerald-900 transition-colors">
                               {isSending ? <Loader2 className="h-4 w-4 animate-spin"/> : <Send className="h-4 w-4"/>} 
                               Approve & Send
@@ -879,13 +879,13 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
 
               {/* Generated Article */}
               <InsightCard title="Generated Article [MOCK CMS]" icon={FileText} tooltip="Article placement is mocked because direct automated publishing requires direct integration with target site CMS systems (like WordPress API) which we do not have access to for random sites.">
-                {campaign?.generated_article ? (
+                {(campaign as any)?.generated_article ? (
                   <div className="space-y-3">
                     <div className="text-sm font-semibold text-zinc-200 border-b border-zinc-800 pb-2">
-                      {campaign.generated_article.title}
+                      {(campaign as any).generated_article.title}
                     </div>
                     <div className="max-h-[250px] overflow-y-auto text-xs text-zinc-400 prose prose-invert prose-p:leading-relaxed prose-h1:text-sm prose-h1:font-bold prose-h2:text-xs prose-h2:font-semibold">
-                      <div dangerouslySetInnerHTML={{ __html: campaign.generated_article.body }} />
+                      <div dangerouslySetInnerHTML={{ __html: (campaign as any).generated_article.body }} />
                     </div>
                   </div>
                 ) : (
@@ -998,8 +998,8 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
                 <div className="flex items-center gap-3">
                   <Cpu className="h-5 w-5 text-emerald-400" />
                   <div>
-                    <h3 className="font-semibold">{inspectNodeData.task || inspectNodeId}</h3>
-                    <p className="text-xs text-zinc-400 font-mono">{inspectNodeData.agent || "System"}</p>
+                    <h3 className="font-semibold">{(inspectNodeData as any).task || inspectNodeId}</h3>
+                    <p className="text-xs text-zinc-400 font-mono">{(inspectNodeData as any).agent || "System"}</p>
                   </div>
                 </div>
                 <button onClick={() => setInspectNodeId(null)} className="p-2 hover:bg-zinc-800 rounded-md transition-colors">
@@ -1009,10 +1009,10 @@ function Dashboard({ campaignId, onReset, onSelectCampaign }: { campaignId: stri
               
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  <HoverField label="Status" value={inspectNodeData.status} />
+                  <HoverField label="Status" value={inspectNodeData.status || ""} />
                   <HoverField label="Duration" value={formatDuration(inspectNodeData.duration)} />
-                  <HoverField label="Provider" value={inspectNodeData.provider} />
-                  <HoverField label="Purpose" value={inspectNodeData.provider_purpose} />
+                  <HoverField label="Provider" value={(inspectNodeData as any).provider} />
+                  <HoverField label="Purpose" value={(inspectNodeData as any).provider_purpose} />
                 </div>
                 
                 {inspectNodeData.error && (
